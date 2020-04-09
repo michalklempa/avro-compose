@@ -1,0 +1,15 @@
+digraph "Simple Composition" {
+    rankdir="BT";
+    nodesep=1;
+    node [shape=box,style="rounded,filled",penwidth=2.0,color=black,fillcolor=grey90];
+
+    EmployeeValue [label="EmployeeValue(key: EmployeeKey, info: PersonalInformation)"];
+    EmployeeKey [label="EmployeeKey(id: long)"];
+    PersonalInformation [label="PersonalInformation(address: Address, name: String)"];
+
+    EmployeeKey -> EmployeeValue [label="key"];
+    PersonalInformation -> EmployeeValue [label="info"];
+
+    Address [label="Address(value: String)"];
+    Address -> PersonalInformation [label="address"];
+}

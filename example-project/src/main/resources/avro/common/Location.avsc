@@ -1,0 +1,22 @@
+{
+  "doc": "Location, includes union of two subtypes and one primitive type- string",
+  "name": "com.michalklempa.avro.schemas.common.Location",
+  "type": "record",
+  "fields": [
+    {
+      "name": "locationSpec",
+      "type": [
+        {
+          "type": "com.michalklempa.avro.schemas.common.GPS"
+        },
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        },
+        {
+          "type": "com.michalklempa.avro.schemas.common.Address"
+        }
+      ]
+    }
+  ]
+}

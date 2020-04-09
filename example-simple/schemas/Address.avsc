@@ -1,0 +1,14 @@
+{
+  "doc": "Address",
+  "name": "com.michalklempa.avro.schemas.simple.Address",
+  "type": "record",
+  "fields": [
+    {
+      "name": "value",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

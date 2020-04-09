@@ -1,0 +1,18 @@
+{
+  "doc": "This is an example of composite Avro key prepared for Kafka with enum subtype",
+  "type": "record",
+  "name": "com.michalklempa.avro.schemas.keys.EmployeeKey",
+  "outputFileSuffix": "-key",
+  "fields": [
+    {
+      "doc": "Company Department, this is enum subtype found elsewhere in source file, to demonstrate schema composition",
+      "name": "department",
+      "type": "com.michalklempa.avro.schemas.common.Department"
+    },
+    {
+      "doc": "Employee id with regard to the company",
+      "name": "id",
+      "type": "long"
+    }
+  ]
+}

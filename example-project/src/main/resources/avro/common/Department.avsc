@@ -1,0 +1,6 @@
+{
+  "doc": "Department enum",
+  "name": "com.michalklempa.avro.schemas.common.Department",
+  "type": "enum",
+  "symbols": [ "FRONTEND", "BACKEND", "DATABASE", "ADMIN" ]
+}

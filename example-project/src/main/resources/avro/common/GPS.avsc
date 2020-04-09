@@ -1,0 +1,15 @@
+{
+  "doc": "GPS",
+  "name": "com.michalklempa.avro.schemas.common.GPS",
+  "type": "record",
+  "fields": [
+    {
+      "name": "lat",
+      "type": "double"
+    },
+    {
+      "name": "lon",
+      "type": "double"
+    }
+  ]
+}

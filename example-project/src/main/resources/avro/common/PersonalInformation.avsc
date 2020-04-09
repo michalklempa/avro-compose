@@ -1,0 +1,28 @@
+{
+  "doc": "PersonalInformation, including Location as a subtype",
+  "type": "record",
+  "name": "com.michalklempa.avro.schemas.common.PersonalInformation",
+  "fields": [
+    {
+      "doc": "Location",
+      "name": "location",
+      "type": "com.michalklempa.avro.schemas.common.Location"
+    },
+    {
+      "name": "name",
+      "type":
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+    },
+    {
+      "name": "surname",
+      "type":
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+    }
+    ]
+}

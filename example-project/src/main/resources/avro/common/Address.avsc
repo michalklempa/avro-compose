@@ -1,0 +1,21 @@
+{
+  "doc": "Address",
+  "name": "com.michalklempa.avro.schemas.common.Address",
+  "type": "record",
+  "fields": [
+    {
+      "name": "street",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "city",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

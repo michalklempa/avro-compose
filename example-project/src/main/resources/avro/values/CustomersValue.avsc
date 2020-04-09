@@ -1,0 +1,9 @@
+{
+  "doc": "This is an example of composite named array Avro value prepared for Kafka topic value with subtype, reusing common subtypes, like Address and PersonalInformation",
+  "type": "array",
+  "name": "com.michalklempa.avro.schemas.values.CustomersValue",
+  "outputFileSuffix": "-value",
+  "items": {
+    "type": "com.michalklempa.avro.schemas.common.PersonalInformation"
+  }
+}

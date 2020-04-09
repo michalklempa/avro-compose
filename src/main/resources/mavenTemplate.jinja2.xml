@@ -1,0 +1,26 @@
+        <plugin>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro-maven-plugin</artifactId>
+            <version>1.9.2</version>
+            <executions>
+                <execution>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>schema</goal>
+                    </goals>
+                    <configuration>
+                        <stringType>String</stringType>
+                        <sourceDirectory>${project.basedir}/src/main/resources/avro/</sourceDirectory>
+                        <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                        <includes>
+                            <include>**/*.avsc</include>
+                        </includes>
+                        <imports>
+                            {%- for file in imports %}
+                                <import>{{ file }}</import>
+                            {%- endfor %}
+                        </imports>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>

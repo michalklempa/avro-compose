@@ -1,0 +1,30 @@
+{
+  "doc": "This is an example of composite Avro value prepared for Kafka topic value with subtype, reusing common subtypes, like Location and PersonalInformation",
+  "type": "record",
+  "name": "com.michalklempa.avro.schemas.employee.EmployeeValue",
+  "outputFileSuffix": "-value",
+  "fields": [
+    {
+      "doc": "Lets repeat the key of this record, even if the record is outside Kafka topic, to retain the key of Employee",
+      "name": "key",
+      "type": {
+        "doc": "This is an example of composite Avro key prepared for Kafka",
+        "type": "record",
+        "name": "com.michalklempa.avro.schemas.employee.EmployeeKey",
+        "outputFileSuffix": "-key",
+        "fields": [
+          {
+            "doc": "Employee id with regard to the company",
+            "name": "id",
+            "type": "long"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "Employee Personal Information (which includes Location as a subtype)",
+      "name": "personalInformation",
+      "type": "com.michalklempa.avro.schemas.simple.PersonalInformation"
+    }
+  ]
+}
