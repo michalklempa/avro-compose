@@ -1,5 +1,5 @@
 example-project/src/main/resources/generated
-example-project/src/main/java/avro/src/main/java/com/michalklempa/avro/schemas
+example-project/src/main/java/com/michalklempa/avro/schemas
 example-simple/generated
 
 # Created by https://www.gitignore.io/api/macos,intellij+all,visualstudiocode

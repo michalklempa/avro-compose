@@ -34,7 +34,7 @@ All you need is to provide the input schemas.
 ### Simple JAR
 To download the artifact run:
 ```
-mvn dependency:copy -Dartifact=com.michalklempa:avro-compose:0.0.1 -DoutputDirectory=.
+mvn dependency:copy -Dartifact=com.michalklempa:avro-compose:0.0.1:jar:shaded -DoutputDirectory=.
 ```
 For a simple example with composing schemas, look into [example-simple](./example-simple/README.md)
 

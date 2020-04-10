@@ -150,7 +150,7 @@ and download the latest release there.
 ### Composing schemas
 To compose the schema files and output each Avro named type into single file, we may run the minimal command:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ ./schemas/ 
 ```
 If everything goes well, we should see the generated schemas:
 ```bash
@@ -237,12 +237,12 @@ rm ./generated/*
 
 One-line format example:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format oneline ./schemas/
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format oneline ./schemas/
 ```
 
 Canonical format example:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format canonical ./schemas/
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format canonical ./schemas/
 ```
 
 #### Changing output file names
@@ -275,7 +275,7 @@ template string as a filename.
 ##### Simple type names as filenames
 Lets remove the namespace from filenames and use only the simple type name (the last part):
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.name }}.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.name }}.avsc"  ./schemas/ 
 ```
 
 Output layout:
@@ -292,7 +292,7 @@ Lets put each file into a corresponding subdirectory with naming from the namesp
 
 One option is flat package style, when directory name is namespace name:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.namespace }}/{{ schema.name }}.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.namespace }}/{{ schema.name }}.avsc"  ./schemas/ 
 ```
 Output layout:
 ```
@@ -309,7 +309,7 @@ generated/
 Another common used package style option is to create subdirectories for every dot-separated part of namespace.
 This can be achieved with jinja2 filters, replacing the '.' with directory separator '/':
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.namespace | replace('.', '/') }}/{{ schema.name }}.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.filename.template "{{ schema.namespace | replace('.', '/') }}/{{ schema.name }}.avsc"  ./schemas/ 
 ```
 
 Output layout:
@@ -331,7 +331,7 @@ generated/
 We can combine the output types into single file, or retaining the file naming structure from source files.
 To output into single file, we also change the `--output.schemas.format` to `oneline`. The filename can be static:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "all.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "all.avsc"  ./schemas/ 
 ```
 Output layout:
 ```
@@ -342,7 +342,7 @@ generated/
 ##### Combining multiple output schema types into file per-namespace
 Combine schemas to files per-namespace:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ schema.namespace }}.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ schema.namespace }}.avsc"  ./schemas/ 
 ```
 Output layout:
 ```
@@ -353,7 +353,7 @@ generated/
 ##### Retain the source file name structure
 Retain the source file name (if there is more than one type defined in source file, there will be more than one in output):
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ source.basename }}"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ source.basename }}"  ./schemas/ 
 ```
 Output layout:
 ```
@@ -380,7 +380,7 @@ In this example, we output Confluent Schema Registry default [topic naming strat
 
 Lets output the variable `outputFileSuffix` as part of output filename:
 ```bash
-java -jar avro-compose-0.0.1.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ schema.name }}{{ schema.props.outputFileSuffix }}.avsc"  ./schemas/ 
+java -jar avro-compose-0.0.1-shaded.jar --output.schemas.directory ./generated/ --output.schemas.format oneline --output.schemas.filename.template "{{ schema.name }}{{ schema.props.outputFileSuffix }}.avsc"  ./schemas/ 
 ```
 
 Output layout:
