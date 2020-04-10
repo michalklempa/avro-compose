@@ -141,7 +141,7 @@ There are two sub-types required:
 ### Downloading the avro-compose tool
 To download the avro-compose JAR file, we may run the following command:
 ```bash
-mvn dependency:copy -Dartifact=com.michalklempa:avro-compose:0.0.1 -DoutputDirectory=.
+mvn dependency:copy -Dartifact=com.michalklempa:avro-compose:0.0.1:jar:shaded -DoutputDirectory=.
 ```
 
 Or head to the [avro-compose github repository](https://github.com/michalklempa/avro-compose)
