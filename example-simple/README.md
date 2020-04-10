@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Avro Compose - Simple Schema Composition Example](#avro-compose---simple-schema-composition-example)
+  - [Requirements](#requirements)
+    - [Schema types](#schema-types)
+      - [Entity schemas](#entity-schemas)
+        - [EmployeeValue and EmployeeKey](#employeevalue-and-employeekey)
+        - [PersonalInformation](#personalinformation)
+        - [Address](#address)
+    - [Downloading the avro-compose tool](#downloading-the-avro-compose-tool)
+    - [Composing schemas](#composing-schemas)
+      - [Changing JSON output format](#changing-json-output-format)
+      - [Changing output file names](#changing-output-file-names)
+        - [Simple type names as filenames](#simple-type-names-as-filenames)
+        - [Namespace dot separated parts as directories (Java package style)](#namespace-dot-separated-parts-as-directories-java-package-style)
+        - [Namespace dot separated parts as sub-directories (Java package style #2)](#namespace-dot-separated-parts-as-sub-directories-java-package-style-2)
+        - [Combining multiple output schema types into one file](#combining-multiple-output-schema-types-into-one-file)
+        - [Combining multiple output schema types into file per-namespace](#combining-multiple-output-schema-types-into-file-per-namespace)
+        - [Retain the source file name structure](#retain-the-source-file-name-structure)
+        - [Using special keys in source schemas to alter output filenames (-value, -key Kafka style)](#using-special-keys-in-source-schemas-to-alter-output-filenames--value--key-kafka-style)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Avro Compose - Simple Schema Composition Example
 ## Requirements
 - Java 8 JDK, various options: [Zulu](https://www.azul.com/downloads/zulu-community), or [OpenJDK](https://openjdk.java.net/)

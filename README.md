@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Avro Compose](#avro-compose)
+  - [Requirements](#requirements)
+  - [Motivation](#motivation)
+  - [Download](#download)
+    - [Simple JAR](#simple-jar)
+    - [Maven setup](#maven-setup)
+  - [References](#references)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Avro Compose
 Utility framework for composing Avro Schemas. From smaller components (types) specified in separate files into large schemas ready to be deployed to schema registry or your application.
 
@@ -11,10 +25,10 @@ With schema definition language (the JSON), there is no possibility to import ot
 When we do not want to rewrite schema into Avro [Interface Definition Language](https://avro.apache.org/docs/current/idl.html) as proposed in [1](#references),
 we have two options to ensure correct ordering of input files before parsing (either by avro-maven-plugin or our own code):
 1. name the files so they order lexicographically and ensure proper loading
-2. write our own to tool to parse the files and if pair dependencies (= this project)
+2. write our own tool to parse the files and match dependencies (= this project)
 
-In this project we do not require any particular ordering of input files. If they can parse as a whole, we find this ordering programatically.
-All you need is to provide the directory with schemas as input.
+In this project we do not require any particular ordering of input files. If they can parse as a whole, we find correct ordering programatically.
+All you need is to provide the input schemas.
 
 ## Download
 ### Simple JAR

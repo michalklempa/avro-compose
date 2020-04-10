@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Avro Compose - Example Maven Project](#avro-compose---example-maven-project)
+  - [Requirements](#requirements)
+  - [Download](#download)
+    - [Maven setup](#maven-setup)
+    - [Usage with Maven](#usage-with-maven)
+  - [Feeding the imports for avro-maven-plugin](#feeding-the-imports-for-avro-maven-plugin)
+  - [References](#references)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Avro Compose - Example Maven Project
 This example assumes you are familiar with entity structure of examples and basic command-line usage of avro-compose.jar.
 If you have not read the [simple example README](../example-simple/README.md), we recommend reading it before proceeding.
