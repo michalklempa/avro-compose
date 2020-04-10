@@ -33,12 +33,6 @@
             <artifactId>avro-compose</artifactId>
             <version>0.0.1</version>
             <type>jar</type>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
@@ -151,8 +145,8 @@
                                 <include>**/*.avsc</include>
                             </includes>
                             <imports>
-                                <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/Address.avsc</import>
                                 <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/GPS.avsc</import>
+                                <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/Address.avsc</import>
                                 <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/Location.avsc</import>
                                 <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/PersonalInformation.avsc</import>
                                 <import>/home/michalklempa/q/avro-model/example-project/src/main/resources/avro/common/Department.avsc</import>
