@@ -12,6 +12,10 @@
       "type": "string"
     },
     {
+      "name": "metadataBasic",
+      "type": "com.oivanov.examples.ExampleMetadata"
+    },
+    {
       "name": "metadata",
       "type": "com.oivanov.examples.ExampleMetadata"
     },
