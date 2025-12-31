@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "namespace": "com.oivanov.examples",
+  "name": "ExampleMetadata",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "version",
+      "type": "string"
+    }
+  ]
+}

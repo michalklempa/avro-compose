@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "ExampleToken",
+  "namespace": "com.oivanov.examples",
+  "fields": [
+    {
+      "name": "raw",
+      "type": "string"
+    },
+    {
+      "name": "origin",
+      "type": "string"
+    },
+    {
+      "name": "metadataBasic",
+      "type": "com.oivanov.examples.ExampleMetadata"
+    },
+    {
+      "name": "metadata",
+      "type": "com.oivanov.examples.ExampleMetadata"
+    },
+    {
+      "name": "subscription",
+      "type": "com.oivanov.examples.ExampleSubscription"
+    }
+  ]
+}

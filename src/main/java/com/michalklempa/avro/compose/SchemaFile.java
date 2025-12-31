@@ -13,6 +13,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.common.collect.MapDifference;
+import com.google.common.collect.Maps;
+
 public interface SchemaFile {
     String name();
 
@@ -132,7 +135,8 @@ public interface SchemaFile {
         public static Parsed parsed(Attempt schemaFile) throws IOException {
             Schema.Parser parser = new Schema.Parser();
             for (SchemaFile.Parsed dependency : schemaFile.dependencies()) {
-                parser.addTypes(dependency.types());
+                MapDifference<String, Schema> difference = Maps.difference(parser.getTypes(), dependency.types());
+                parser.addTypes(difference.entriesOnlyOnRight());
             }
             try (InputStream is = new FileInputStream(schemaFile.filename())) {
                 Set<String> typeNames = new HashSet<>();

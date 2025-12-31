@@ -1,0 +1,17 @@
+digraph "Simple Composition" {
+    rankdir="BT";
+    nodesep=1;
+    node [shape=box,style="rounded,filled",penwidth=2.0,color=black,fillcolor=grey90];
+
+    ExampleMetadata [label="ExampleMetadata(timestamp: long, name: String, version: String)"];
+    ExampleSubscription [label="ExampleSubscription(raw: String, mimetype: String, subscriptionMetadata: ExampleMetadata)"];
+    ExampleToken [label="ExampleToken(raw: String, origin: String, metadata: ExampleMetadata, metadataBasic: ExampleMetadata, metadata: ExampleMetadata, subscription: ExampleSubscription)"];
+
+    ExampleMetadata -> ExampleToken [label="metadata"];
+    ExampleMetadata -> ExampleToken [label="metadataBasic"];
+
+    ExampleSubscription -> ExampleToken [label="subscription"];
+
+    ExampleMetadata -> ExampleSubscription [label="subscriptionMetadata"];
+
+}
